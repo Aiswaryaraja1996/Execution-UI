@@ -1,0 +1,22 @@
+{
+    "PI Voice": {
+      "Regression": "Some value",
+      "newRegrssion": "some other value",
+      "againRegression": "new values"
+    },
+    "Claim Voice": {
+      "Regression": "Some value",
+      "newRegrssion": "some other value",
+      "TcomRegression": "new values"
+    },
+    "BI Voice": {
+      "Regression": "Some value",
+      "newRegrssion": "some other value",
+      "TcomRegression": "new values"
+    },
+    "ESU": {
+        "Regression": "Some value",
+        "newRegrssion": "some other value",
+        "TcomRegression": "new values"
+      }
+  }

@@ -1,0 +1,17 @@
+{
+    "PI Email": {
+      "Regression": "Some value",
+      "newRegrssion": "some other value",
+      "againRegression": "new values"
+    },
+    "Claim Email": {
+      "Regression": "Some value",
+      "newRegrssion": "some other value",
+      "TcomRegression": "new values"
+    },
+    "BI Email": {
+      "Regression": "Some value",
+      "newRegrssion": "some other value",
+      "TcomRegression": "new values"
+    }
+  }

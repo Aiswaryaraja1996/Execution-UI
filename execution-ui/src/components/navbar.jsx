@@ -1,5 +1,4 @@
 import AppBar from "@mui/material/AppBar";
-import CameraIcon from "@mui/icons-material/PhotoCamera";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -9,10 +8,10 @@ import MenuItem from "@mui/material/MenuItem";
 const pages = [
   { id: 1, page: "Voice" },
   { id: 2, page: "Chat" },
-  { id: 3, page: "E-mail" },
+  { id: 3, page: "Email" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ setChannel }) {
   return (
     <AppBar
       sx={{
@@ -52,7 +51,12 @@ export default function Navbar() {
           </Box>
           <Box sx={{ display: "flex" }}>
             {pages.map((entry) => (
-              <MenuItem key={entry.id} onClick={() => console.log(entry.page)}>
+              <MenuItem
+                key={entry.id}
+                onClick={async () => {
+                  setChannel(entry.page);
+                }}
+              >
                 <Typography
                   textAlign="center"
                   noWrap

@@ -1,0 +1,17 @@
+{
+  "PI Chat": {
+    "Regression": "Some value",
+    "newRegrssion": "some other value",
+    "againRegression": "new values"
+  },
+  "Claim Chat": {
+    "Regression": "Some value",
+    "newRegrssion": "some other value",
+    "TcomRegression": "new values"
+  },
+  "BI Chat": {
+    "Regression": "Some value",
+    "newRegrssion": "some other value",
+    "TcomRegression": "new values"
+  }
+}
