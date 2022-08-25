@@ -5,6 +5,12 @@ const lobData = {
   Chat: ["Claim Chat", "PI Chat", "BI Chat", "CSR Assist"],
 };
 
+const arrObj = [
+  { testCase: "Regression", state: false },
+  { testCase: "newRegrssion", state: false },
+  { testCase: "againRegression", state: false },
+];
+
 function replaceBlank(lob) {
   let newLob = lob.replace(/_/g, " ");
   return newLob;
@@ -14,5 +20,7 @@ function test(channel) {
     console.log(replaceBlank(values));
   });
 }
+
+function changeTcState(objArray) {}
 
 test("Voice");

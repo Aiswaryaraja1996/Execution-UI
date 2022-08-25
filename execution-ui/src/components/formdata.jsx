@@ -25,6 +25,8 @@ function replaceBlank(lob) {
   return newLob;
 }
 
+function changeTcState(objArray) {}
+
 export default function Formdata({ channel }) {
   const [env, setEnv] = useState("");
   const [value, setValue] = useState("");
@@ -32,7 +34,7 @@ export default function Formdata({ channel }) {
   const [valErr, setValErr] = useState("");
   const [showTestCase, setShowTestCase] = useState(false);
   const [data, setData] = useState([]);
-  const [tc, setTc] = useState("");
+  const [tc, setTc] = useState([]);
 
   useEffect(() => {
     setEnv("");
@@ -40,7 +42,7 @@ export default function Formdata({ channel }) {
     setShowTestCase(false);
     setEnvErr("");
     setValErr("");
-    setTc("");
+    setTc([{}]);
   }, [channel]);
 
   const handleLobChange = (event) => {
@@ -52,11 +54,14 @@ export default function Formdata({ channel }) {
 
   const handleExecution = (event) => {
     console.log(`Starting execution`);
-    console.log(`Channel = ${channel} || Lob = ${value} || Environment = ${env} || TestCase string = ${tc}`);
+    console.log(tc);
+    console.log(
+      `Channel = ${channel} || Lob = ${value} || Environment = ${env} || TestCase string = ${tc}`
+    );
   };
 
   const handleTestCaseChange = (event) => {
-    setTc(event.target.value);
+    //setTc(event.target.value);
     console.log("Test case", event.target.value);
     console.log("Slected status", event.target.checked);
   };
@@ -74,6 +79,12 @@ export default function Formdata({ channel }) {
         })
         .then((res) => {
           setData(res);
+          res.map((items) => {
+            setTc((prevStat) => ([
+              ...prevStat,
+              { testCase: items, state: false },
+            ]));
+          });
         })
         .catch((err) => {
           console.log(err);
