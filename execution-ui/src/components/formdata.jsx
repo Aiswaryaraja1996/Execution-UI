@@ -52,6 +52,7 @@ export default function Formdata({ channel }) {
 
   const handleExecution = (event) => {
     console.log(`Starting execution`);
+    console.log(`Channel = ${channel} || Lob = ${value} || Environment = ${env} || TestCase string = ${tc}`);
   };
 
   const handleTestCaseChange = (event) => {
